@@ -8,6 +8,10 @@ processes = []
 [env]
   DJANGO_SETTINGS_MODULE = "config.settings.prod"
 
+[deploy]
+  release_command = "pipenv run python manage.py migrate"
+
+
 [experimental]
   allowed_public_ports = []
   auto_rollback = true
