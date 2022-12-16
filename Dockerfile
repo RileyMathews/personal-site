@@ -12,6 +12,6 @@ RUN pip install pipenv
 COPY Pipfile* .
 RUN pipenv install
 COPY . .
-RUN pipenv run python manage.py collectstatic --no-input
+RUN pipenv run python manage.py collectstatic --no-input --settings config.settings.prod
 
 CMD ["pipenv", "run", "gunicorn", "-b", ":8000", "config.wsgi"]
