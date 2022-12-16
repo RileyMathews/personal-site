@@ -7,3 +7,4 @@ DATABASES = {
     "default": dj_database_url.parse(get_env_variable("DATABASE_URL"))
 }
 SECRET_KEY = get_env_variable("SECRET_KEY")
+CSRF_COOKIE_DOMAIN = "rileymathews.fly.dev"
