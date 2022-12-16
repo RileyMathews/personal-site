@@ -8,4 +8,4 @@ DATABASES = {
 }
 SECRET_KEY = get_env_variable("SECRET_KEY")
 CSRF_COOKIE_DOMAIN = "rileymathews.fly.dev"
-CSRF_TRUSTED_ORIGINS = ALLOWED_HOSTS
+CSRF_TRUSTED_ORIGINS = ["https://rileymathews.fly.dev"]
