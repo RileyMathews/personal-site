@@ -9,6 +9,8 @@ services:
     stdin_open: true
     ports:
       - 8000:8000
+    environment:
+      - DJANGO_SETTINGS_MODULE=config.settings.local
     volumes:
       - .:/code
       - venv:/venv
