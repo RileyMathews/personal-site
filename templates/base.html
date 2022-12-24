@@ -17,11 +17,12 @@
 
 </head>
 
-<body>
-
+<body class="bg-neutral-600 text-gray-50">
+    {% include 'navigation.html' %}
+    <div class="m-5">
     {% block content %}
         <h1>content here!</h1>
     {% endblock %}
-
+    </div>
 </body>
 </html>
