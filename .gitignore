@@ -133,3 +133,4 @@ dmypy.json
 # JS/CSS
 node_modules
 staticfiles
+static/dist

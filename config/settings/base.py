@@ -128,6 +128,13 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
+# where django will look for static files
+STATICFILES_DIRS = [
+    BASE_DIR.joinpath('static/dist'), # where compiled frontend assets are stored, gitignored
+    BASE_DIR.joinpath('static/public'), # where non compiled assets are stored, not in gitignore
+]
+
+# where 'collectstatic' command will copy files to
 STATIC_ROOT = BASE_DIR.joinpath("staticfiles")
 STATIC_URL = "static/"
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
