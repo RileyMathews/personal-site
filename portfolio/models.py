@@ -35,3 +35,10 @@ class ProjectPage(Page):
             FieldPanel('technologies')
         ])
     ]
+
+class ProjectIndexPage(Page):
+    body = RichTextField(blank=True)
+    
+    content_panels = Page.content_panels + [
+        FieldPanel("body")
+    ]
