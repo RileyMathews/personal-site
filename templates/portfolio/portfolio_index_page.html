@@ -11,5 +11,15 @@
     <article class="max-w-3xl grid gap-10">
         {{page.body|richtext}}
     </article>
+    <div class="container mx-auto">
+        <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
+            {% for project_page in project_pages %}
+            <div class="flex flex-col text-center items-center content-center rounded-xl border-2 border-gray-300 p-4">
+                <p class="text-lg">{{project_page.title}}</p>
+                {{project_page.description|richtext|truncatewords_html:15}}
+            </div>
+            {% endfor %}
+        </div>
+    </div>
 </div>
 {% endblock %}

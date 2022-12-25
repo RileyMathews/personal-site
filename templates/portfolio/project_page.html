@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% load wagtailcore_tags %}
+
+{% block content %}
+<div class="grid gap-10 justify-items-center">
+    <header class="text-5xl font-bold">
+        {{page.title}}
+    </header>
+
+    {% if page.repository_url %}
+        <a href="{{page.repository_url}}">View code!</a>
+    {% endif %}
+
+    <article class="max-w-3xl grid gap-10">
+        {{page.description|richtext}}
+    </article>
+</div>
+{% endblock %}
