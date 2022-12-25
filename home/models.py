@@ -10,3 +10,12 @@ class HomePage(Page):
     content_panels = Page.content_panels + [
         FieldPanel("body")
     ]
+
+    parent_page_types = ['wagtailcore.Page']
+    subpage_types = []
+
+    def get_context(self, request, *args, **kwargs):
+        context = super().get_context(request, *args, **kwargs)
+
+        context['navigation_pages'] = self.get_children().live().in_menu()
+        return context
