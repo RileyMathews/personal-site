@@ -1,0 +1,15 @@
+{% load navigation_tags %}
+{% get_root_page_menu as navigation_pages %}
+
+<div class="bg-neutral-200 dark:bg-neutral-800 p-6">
+    <nav class="flex justify-between">
+        <span class="flex justify-start gap-3">
+            <a href="/">Home</a>
+            {% for page in navigation_pages %}
+                <a href="{{ page.url }}">{{ page.title }}</a>
+            {% endfor %}
+        </span>
+    </nav>
+</div>
+
+

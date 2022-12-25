@@ -61,6 +61,7 @@ INSTALLED_APPS = [
     "taggit",
     "home",
     "portfolio",
+    "navigation",
 ]
 
 MIDDLEWARE = [
