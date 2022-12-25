@@ -18,12 +18,10 @@
 </head>
 
 <body class="bg-neutral-50 text-neutral-900 dark:bg-neutral-900 dark:text-neutral-100">
-    {% include 'navigation.html' %}
     <div class="m-5">
     {% block content %}
         <h1>content here!</h1>
     {% endblock %}
     </div>
 </body>
-<script src="{% static 'js/darkModeToggle.js' %}"></script>
 </html>
