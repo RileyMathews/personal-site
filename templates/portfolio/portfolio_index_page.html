@@ -17,6 +17,7 @@
             <div class="flex flex-col text-center items-center content-center rounded-xl border-2 border-gray-300 p-4">
                 <p class="text-lg">{{project_page.title}}</p>
                 {{project_page.description|richtext|truncatewords_html:15}}
+                <a class="underline text-blue-300 hover:text-blue-400 visited:text-purple-400 visited:hover:text-purple-500" href="{{project_page.url}}">View more</a>
             </div>
             {% endfor %}
         </div>
