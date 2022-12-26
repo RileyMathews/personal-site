@@ -2,6 +2,9 @@ from django.db import models
 from wagtail.models import Page
 from wagtail.fields import RichTextField
 from wagtail.admin.panels import FieldPanel
+from modelcluster.fields import ParentalKey
+from modelcluster.contrib.taggit import ClusterTaggableManager
+from taggit.models import TaggedItemBase
 
 # Create your models here.
 class PortfolioIndexPage(Page):
@@ -21,13 +24,19 @@ class PortfolioIndexPage(Page):
         return context
 
 
+class ProjectPageTag(TaggedItemBase):
+    content_object = ParentalKey('portfolio.ProjectPage', on_delete=models.CASCADE, related_name='tagged_items')
+
+
 class ProjectPage(Page):
     description = RichTextField()
     repository_url = models.URLField(blank=True)
+    tags = ClusterTaggableManager(through=ProjectPageTag, blank=True)
 
     content_panels = Page.content_panels + [
         FieldPanel('description'),
         FieldPanel('repository_url'),
+        FieldPanel('tags'),
     ]
 
     parent_page_types = ['portfolio.PortfolioIndexPage']
