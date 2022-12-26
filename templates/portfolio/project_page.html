@@ -8,8 +8,16 @@
         {{page.title}}
     </header>
 
+    <div>
+        {% for tag in page.tags.all %}
+        {% include 'components/tag.html' with tag=tag %}
+        {% endfor %}
+    </div>
+
     {% if page.repository_url %}
-        <a href="{{page.repository_url}}">View code!</a>
+    <a href="{{page.repository_url}}"
+        class="underline text-blue-300 hover:text-blue-400 visited:text-purple-400 visited:hover:text-purple-500">View
+        code!</a>
     {% endif %}
 
     <article class="max-w-3xl grid gap-10">
