@@ -8,6 +8,9 @@
             {% for page in navigation_pages %}
                 <a href="{{ page.url }}">{{ page.title }}</a>
             {% endfor %}
+            {% if request.user.is_staff %}
+                <a href="{% url 'wagtailadmin_home' %}">CMS Admin</a>
+            {% endif %}
         </span>
     </nav>
 </div>
