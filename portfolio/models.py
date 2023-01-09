@@ -30,6 +30,7 @@ class ProjectPageTag(TaggedItemBase):
 
 class ProjectPage(Page):
     description = RichTextField()
+    short_description = models.TextField(max_length=255, default='')
     repository_url = models.URLField(blank=True)
     tags = ClusterTaggableManager(through=ProjectPageTag, blank=True)
 
