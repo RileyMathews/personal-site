@@ -38,6 +38,7 @@ class ProjectPage(Page):
         FieldPanel('description'),
         FieldPanel('repository_url'),
         FieldPanel('tags'),
+        FieldPanel('short_description'),
     ]
 
     parent_page_types = ['portfolio.PortfolioIndexPage']
