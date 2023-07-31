@@ -15,6 +15,9 @@ DATABASES = {
     "default": dj_database_url.parse("postgres://user:password@database:5432/database"),
 }
 
+INSTALLED_APPS += ["livereload"]
+MIDDLEWARE += ["livereload.middleware.LiveReloadScript"]
+
 
 try:
     from .local import *

@@ -9,6 +9,7 @@ services:
     stdin_open: true
     ports:
       - 8000:8000
+      - 35729:35729 # live reload server
     environment:
       - DJANGO_SETTINGS_MODULE=config.settings.dev
     volumes:
