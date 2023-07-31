@@ -23,5 +23,17 @@
 }
 
 .navbar a::before {
-    content: "$";
+    content: "»";
+}
+
+.container {
+    margin: auto;
+    width: clamp(25rem, 80vw, 100rem);
+}
+
+.jumbo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vw;
 }
