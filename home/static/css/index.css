@@ -5,6 +5,10 @@
     --primary-color: #FFC759;
 }
 
+h1,h2,h3,h4,h5,h6 {
+    font-weight: 500;
+}
+
 .body {
     background-color: var(--bg-color);
     color: var(--fg-color);
@@ -18,8 +22,14 @@
     gap: 1rem;
 }
 
-.navbar a {
+a {
     color: var(--primary-color);
+    text-decoration: none;
+    transition-duration: 0.5s;
+}
+
+a:hover {
+    color: var(--fg-color);
 }
 
 .navbar a::before {
@@ -36,4 +46,9 @@
     justify-content: center;
     align-items: center;
     height: 100vw;
+}
+
+.preview {
+    border-bottom: 2px solid var(--bg-alt-color);
+    padding-bottom: 1rem;
 }
