@@ -6,7 +6,7 @@ from wagtail.admin.panels import FieldPanel
 from wagtail.search import index
 
 
-class PortfolioIndexPage(Page):
+class ProjectsIndexPage(Page):
     intro = RichTextField(blank=True)
 
     content_panels = Page.content_panels + [
