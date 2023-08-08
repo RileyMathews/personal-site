@@ -39,4 +39,6 @@ RUN DJANGO_SETTINGS_MODULE=config.settings.collectstatic poetry run python manag
 
 FROM build as release
 
-CMD ["poetry", "run", "daphne", "-b", "0.0.0.0", "-p", "8000", "config.asgi:application"]
+ENV DJANGO_SETTINGS_MODULE config.settings.production
+EXPOSE 8000
+CMD ["poetry", "run", "gunicorn", "-b", ":8000", "config.wsgi"]
