@@ -12,8 +12,9 @@ services:
       - traefik.enable=true
       - traefik.http.routers.personal-site.rule=Host(`rileymathews.com`)
       - traefik.http.routers.personal-site.tls.certresolver=le
-    env_file:
-      - stack.env
+    environment:
+      - SECRET_KEY=$SECRET_KEY
+      - DATABASE_URL=$DATABASE_URL
     networks:
       - database
     restart: unless-stopped
