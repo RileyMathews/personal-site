@@ -7,7 +7,7 @@ networks:
 
 services:
   website:
-    image: gitea.rileymathews.com/rileymathews/personal-site:${SERVICE_TAG:-stable}
+    image: gitea.rileymathews.com/rileymathews/personal-site:${SERVICE_TAG}
     labels:
       - traefik.enable=true
       - traefik.http.routers.personal-site.rule=Host(`rileymathews.com`)
