@@ -45,7 +45,7 @@ a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vw;
+    height: 90vh;
 }
 
 .preview {
