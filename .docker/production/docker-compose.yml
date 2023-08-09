@@ -7,7 +7,7 @@ networks:
 
 services:
   website:
-    image: gitea.home.rileymathews.com/rileymathews/personal-site:beta
+    image: gitea.rileymathews.com/rileymathews/personal-site:beta
     labels:
       - traefik.enable=true
       - traefik.http.routers.personal-site.rule=Host(`rileymathews.com`)
