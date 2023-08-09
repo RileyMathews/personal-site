@@ -3,9 +3,9 @@ import dj_database_url
 
 DEBUG = False
 SECRET_KEY = get_env_variable("SECRET_KEY")
-ALLOWED_HOSTS = ["test.home.rileymathews.com"]
-CSRF_COOKIE_DOMAIN = "test.home.rileymathews.com"
-CSRF_TRUSTED_ORIGINS = ["https://test.home.rileymathews.com"]
+ALLOWED_HOSTS = ["rileymathews.com"]
+CSRF_COOKIE_DOMAIN = "rileymathews.com"
+CSRF_TRUSTED_ORIGINS = ["https://rileymathews.com"]
 DATABASES = {
     "default": dj_database_url.parse(get_env_variable("DATABASE_URL")),
 }
