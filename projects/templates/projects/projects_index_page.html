@@ -13,7 +13,14 @@
         {% for post in page.get_children %}
             <div class="preview">
                 <h2><a href="{% pageurl post %}">{{ post.title }}</a></h2>
-                {{ post.specific.intro }}
+                <div class="tags">
+                    {% for tag in post.specific.tags.all %}
+                        <span class="tag">{{ tag }}</span>
+                    {% endfor %}
+                </div>
+                <div>
+                    {{ post.specific.intro }}
+                </div>
             </div>
         {% endfor %}
     </div>
