@@ -39,7 +39,12 @@ a:hover {
 
 .container {
     margin: auto;
-    width: clamp(25rem, 80vw, 100rem);
+    width: clamp(25rem, 80vw, 85rem);
+}
+
+.post-body {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
 }
 
 .jumbo {

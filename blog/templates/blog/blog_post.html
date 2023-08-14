@@ -14,7 +14,8 @@
             {% endfor %}
         </div>
         <div class="intro">{{ page.intro }}</div>
-
-        {{ page.body|richtext }}
+        <div class="post-body">
+            {{ page.body|richtext }}
+        </div>
     </div>
 {% endblock %}
