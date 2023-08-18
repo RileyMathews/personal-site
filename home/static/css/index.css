@@ -39,7 +39,7 @@ a:hover {
 
 .container {
     margin: auto;
-    width: clamp(25rem, 80vw, 85rem);
+    width: clamp(200px, 95vw, 85rem);
 }
 
 .post-body {
