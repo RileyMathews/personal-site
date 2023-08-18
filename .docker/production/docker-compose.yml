@@ -2,7 +2,7 @@ version: "3.8"
 
 networks:
   database:
-    name: postgresql_database-network
+    name: shared_postgresql_network
     external: true
 
 services:
